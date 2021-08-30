@@ -3,9 +3,11 @@ let inputText = document.querySelector("#textArea");
 let translatedArea = document.querySelector(".translatedArea");
 
 translateButton.addEventListener("click", function (e) {
-    let inputTextValue = inputText.value;
-    console.log(inputTextValue);
-    serverURL(inputTextValue);
+    if(inputText.value!=""){
+
+        let inputTextValue = inputText.value;
+        serverURL(inputTextValue);
+    }
 })
 
 function serverURL(inputTextValue) {
